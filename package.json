@@ -1,0 +1,22 @@
+{
+  "name": "my-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexdier/ideal-octo-memory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lexdier/ideal-octo-memory/issues"
+  },
+  "homepage": "https://github.com/lexdier/ideal-octo-memory#readme",
+  "dependencies": {
+    "http-server": "^14.1.0"
+  }
+}
