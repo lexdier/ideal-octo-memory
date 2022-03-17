@@ -32,6 +32,15 @@
         border: 20px solid #ffffff59;
         backdrop-filter: blur(4px);
     }
+    
+    .cardstyle {
+        transition: 2s;
+    }
+    
+    .cardstyle:hover {
+        transform-style: preserve-3d;
+        transform: rotateY(180deg);
+    }
 </style>
 
 <body style="background-color: rgb(37, 37, 37);">
@@ -89,7 +98,7 @@
                     </ul>
                 </div>
             </div>
-            <!--Menu lateral-->
+
 
 
         </div>
@@ -125,21 +134,19 @@
         </button>
         </div>-->
         <!-- card-->
-        <style>
-            .cardstyle {
-                transition: 2s;
-            }
-            
-            .cardstyle:hover {
-                transform-style: preserve-3d;
-                transform: rotateY(180deg);
-            }
-        </style>
+        <div class="d-flex justify-content-around">
+            <div class="card bg-black  align-self-center cardstyle">
+                <img src="https://picsum.photos/id/237/300/300" class="card-img-top " alt="...">
 
+            </div>
+            <div class="card bg-black  align-self-center cardstyle">
+                <img src="https://picsum.photos/id/237/300/300" class="card-img-top " alt="...">
 
+            </div>
+            <div class="card bg-black  align-self-center cardstyle">
+                <img src="https://picsum.photos/id/237/300/300" class="card-img-top " alt="...">
 
-        <div class="card bg-black  align-self-center cardstyle">
-            <img src="https://picsum.photos/id/237/300/300" class="card-img-top " alt="...">
+            </div>
 
         </div>
 
