@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "components/",
+			"problemMatcher": [],
+			"label": "npm: start - components",
+			"detail": "stencil build --dev --watch --serve"
+		}
+	]
+}

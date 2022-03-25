@@ -16,6 +16,8 @@ export namespace Components {
     }
     interface ElCarrucel {
     }
+    interface TheNavbar {
+    }
 }
 declare global {
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
@@ -42,11 +44,18 @@ declare global {
         prototype: HTMLElCarrucelElement;
         new (): HTMLElCarrucelElement;
     };
+    interface HTMLTheNavbarElement extends Components.TheNavbar, HTMLStencilElement {
+    }
+    var HTMLTheNavbarElement: {
+        prototype: HTMLTheNavbarElement;
+        new (): HTMLTheNavbarElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
         "el-carrucel": HTMLElCarrucelElement;
+        "the-navbar": HTMLTheNavbarElement;
     }
 }
 declare namespace LocalJSX {
@@ -59,11 +68,14 @@ declare namespace LocalJSX {
     }
     interface ElCarrucel {
     }
+    interface TheNavbar {
+    }
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
         "el-carrucel": ElCarrucel;
+        "the-navbar": TheNavbar;
     }
 }
 export { LocalJSX as JSX };
@@ -74,6 +86,7 @@ declare module "@stencil/core" {
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "el-carrucel": LocalJSX.ElCarrucel & JSXBase.HTMLAttributes<HTMLElCarrucelElement>;
+            "the-navbar": LocalJSX.TheNavbar & JSXBase.HTMLAttributes<HTMLTheNavbarElement>;
         }
     }
 }
