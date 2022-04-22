@@ -18,6 +18,9 @@ export namespace Components {
     }
     interface TheNavbar {
     }
+    interface TheTest {
+        "color": string;
+    }
 }
 declare global {
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
@@ -50,12 +53,19 @@ declare global {
         prototype: HTMLTheNavbarElement;
         new (): HTMLTheNavbarElement;
     };
+    interface HTMLTheTestElement extends Components.TheTest, HTMLStencilElement {
+    }
+    var HTMLTheTestElement: {
+        prototype: HTMLTheTestElement;
+        new (): HTMLTheTestElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
         "el-carrucel": HTMLElCarrucelElement;
         "the-navbar": HTMLTheNavbarElement;
+        "the-test": HTMLTheTestElement;
     }
 }
 declare namespace LocalJSX {
@@ -70,12 +80,16 @@ declare namespace LocalJSX {
     }
     interface TheNavbar {
     }
+    interface TheTest {
+        "color"?: string;
+    }
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
         "el-carrucel": ElCarrucel;
         "the-navbar": TheNavbar;
+        "the-test": TheTest;
     }
 }
 export { LocalJSX as JSX };
@@ -87,6 +101,7 @@ declare module "@stencil/core" {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "el-carrucel": LocalJSX.ElCarrucel & JSXBase.HTMLAttributes<HTMLElCarrucelElement>;
             "the-navbar": LocalJSX.TheNavbar & JSXBase.HTMLAttributes<HTMLTheNavbarElement>;
+            "the-test": LocalJSX.TheTest & JSXBase.HTMLAttributes<HTMLTheTestElement>;
         }
     }
 }
