@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="./styles/crud.css">
+    <script src="https://kit.fontawesome.com/8bf01f8af2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    JavaScript Crud
+                </a>
+
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">Home</a>
+
+                    <a class="navbar-item">Documentation</a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">More</a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">About</a>
+                            <a class="navbar-item">Jobs</a>
+                            <a class="navbar-item">Contact</a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">Report an issue</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-light">Log in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main class="main-content">
+
+            <div class="crud-container">
+                <div class="crud-header">
+                    <h1>
+                        Estudiantes Registrados
+                    </h1>
+                    <button id="openRegisterModal" class="button is-success">
+                        <i class="fas fa-plus"></i>
+                        <span>Nuevo Estudiante</span></button>
+
+
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
+                            <th>Telefono</th>
+                            <th>Email</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Lexdier</td>
+                            <td>Savio</td>
+                            <td>Monrabal</td>
+                            <td>48996712663</td>
+                            <td>saviolexdier@gmail.com</td>
+                            <td>
+                                <button class="button is-warning">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="button is-danger">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <div class="modal" id="modal">
+            <div class="modal-background">
+
+            </div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Registrar Nuevo Estudiante</p>
+                    <button id="closeRegisterModal" class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <form id="register-form">
+                        <div class="control">
+                            <label class="label">Nombre</label>
+                            <input name="nombre" class="input is-hovered" type="text" placeholder="Ingresa tu nombre">
+                        </div>
+                        <div class="control">
+                            <label for="apePat" class="label">Apellido Paterno</label>
+                            <input id="apePat" name="apePat" class="input is-hovered" type="text" placeholder="Ingresa tu Apellido Paterno">
+                        </div>
+                        <div class="control">
+                            <label for="apeMat" class="label">Apellido Materno</label>
+                            <input id="apeMat" name="apeMat" class="input is-hovered" type="text" placeholder="Ingresa tu Apellido Materno">
+                        </div>
+                        <div class="control">
+                            <label for="cel" class="label">Telefono</label>
+                            <input id="cel" name="cel" class="input is-hovered" type="number" placeholder="+55***********">
+                        </div>
+                        <div class="control">
+                            <label for="correo" class="label">Email</label>
+                            <input id="correo" name="correo" class="input is-hovered" type="email" placeholder="Ex: s***********@gmail.com">
+                        </div>
+                        <div class="control">
+                            <label for="descrip" class="label">Descripcion</label>
+                            <textarea id="descrip" name="descrip" type="text" placeholder="Descripcion" cols="92" rows="10"></textarea>
+
+                        </div>
+
+                        <footer class="modal-card-foot">
+
+                            <button type="submit" class="button is-success">
+                                <i class="fas fa-save"></i>
+                                <span>Registrar</span>
+                            </button>
+
+                        </footer>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </header>
+    <!--<script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js"; const firebaseConfig = { apiKey: "AIzaSyBEAsLvoIbq9p70h7dU1-GPbC3So6qiFw0", authDomain: "crud-6cd49.firebaseapp.com", projectId: "crud-6cd49", storageBucket: "crud-6cd49.appspot.com",
+        messagingSenderId: "1002380753985", appId: "1:1002380753985:web:3971cb531028db105edac0" }; const app = initializeApp(firebaseConfig);
+    </script>-->
+    <script src="./script/crud.js"></script>
+</body>
+
+
+</html>
